@@ -1,0 +1,367 @@
+{
+  "info": {
+    "_postman_id": "a626d64a-ac10-4da6-ae6f-f0dfce9d71ec",
+    "name": "Queues API (lab.tagroot.io)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "11814059"
+  },
+  "item": [
+    {
+      "name": "API documentation",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://lab.tagroot.io/Queues",
+          "protocol": "https",
+          "host": [
+            "lab",
+            "tagroot",
+            "io"
+          ],
+          "path": [
+            "Queues"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Enqueue (Integer)",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "2",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://lab.tagroot.io/Queues/Test",
+          "protocol": "https",
+          "host": [
+            "lab",
+            "tagroot",
+            "io"
+          ],
+          "path": [
+            "Queues",
+            "Test"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Enqueue (String)",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "\"Hello World!\"",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://lab.tagroot.io/Queues/Test",
+          "protocol": "https",
+          "host": [
+            "lab",
+            "tagroot",
+            "io"
+          ],
+          "path": [
+            "Queues",
+            "Test"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Enqueue (Plain Text)",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "Kilroy was here!",
+          "options": {
+            "raw": {
+              "language": "text"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://lab.tagroot.io/Queues/Test",
+          "protocol": "https",
+          "host": [
+            "lab",
+            "tagroot",
+            "io"
+          ],
+          "path": [
+            "Queues",
+            "Test"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Enqueue (Multiple Items)",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "MIME-Version",
+            "value": "1.0",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "value": "multipart/mixed; boundary=\"simple-boundary-12345\"",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "\r\n--simple-boundary-12345\r\nContent-Type: text/plain; charset=\"utf-8\"\r\nContent-Transfer-Encoding: 7bit\r\n\r\n1\r\n--simple-boundary-12345\r\nContent-Type: text/plain; charset=\"utf-8\"\r\nContent-Transfer-Encoding: 7bit\r\n\r\n2\r\n--simple-boundary-12345\r\nContent-Type: text/plain; charset=\"utf-8\"\r\nContent-Transfer-Encoding: 7bit\r\n\r\n3\r\n--simple-boundary-12345\r\nContent-Type: text/plain; charset=\"utf-8\"\r\nContent-Transfer-Encoding: 7bit\r\n\r\n4\r\n--simple-boundary-12345\r\nContent-Type: text/plain; charset=\"utf-8\"\r\nContent-Transfer-Encoding: 7bit\r\n\r\n5\r\n--simple-boundary-12345\r\nContent-Type: text/plain; charset=\"utf-8\"\r\nContent-Transfer-Encoding: 7bit\r\n\r\n6\r\n--simple-boundary-12345\r\nContent-Type: text/plain; charset=\"utf-8\"\r\nContent-Transfer-Encoding: 7bit\r\n\r\n7\r\n--simple-boundary-12345\r\nContent-Type: text/plain; charset=\"utf-8\"\r\nContent-Transfer-Encoding: 7bit\r\n\r\n8\r\n--simple-boundary-12345\r\nContent-Type: text/plain; charset=\"utf-8\"\r\nContent-Transfer-Encoding: 7bit\r\n\r\n9\r\n--simple-boundary-12345\r\nContent-Type: text/plain; charset=\"utf-8\"\r\nContent-Transfer-Encoding: 7bit\r\n\r\n10\r\n--simple-boundary-12345--\r\n",
+          "options": {
+            "raw": {
+              "language": "text"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://lab.tagroot.io/Queues/Test",
+          "protocol": "https",
+          "host": [
+            "lab",
+            "tagroot",
+            "io"
+          ],
+          "path": [
+            "Queues",
+            "Test"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Enqueue (Protected)",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "text/markdown",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "Kilroy was here!",
+          "options": {
+            "raw": {
+              "language": "text"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://lab.tagroot.io/Queues/Test",
+          "protocol": "https",
+          "host": [
+            "lab",
+            "tagroot",
+            "io"
+          ],
+          "path": [
+            "Queues",
+            "Test"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Dequeue (One Item)",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "https://lab.tagroot.io/Queues/Test",
+          "protocol": "https",
+          "host": [
+            "lab",
+            "tagroot",
+            "io"
+          ],
+          "path": [
+            "Queues",
+            "Test"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Dequeue (Two Items)",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "https://lab.tagroot.io/Queues/Test?Count=2&Timeout=10000&MinTimeout=2000",
+          "protocol": "https",
+          "host": [
+            "lab",
+            "tagroot",
+            "io"
+          ],
+          "path": [
+            "Queues",
+            "Test"
+          ],
+          "query": [
+            {
+              "key": "Count",
+              "value": "2"
+            },
+            {
+              "key": "Timeout",
+              "value": "10000"
+            },
+            {
+              "key": "MinTimeout",
+              "value": "2000"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Dequeue (Queue Not Found)",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "https://lab.tagroot.io/Queues/Test2",
+          "protocol": "https",
+          "host": [
+            "lab",
+            "tagroot",
+            "io"
+          ],
+          "path": [
+            "Queues",
+            "Test2"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Dequeue (Peek)",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "https://lab.tagroot.io/Queues/Test?Peek=1",
+          "protocol": "https",
+          "host": [
+            "lab",
+            "tagroot",
+            "io"
+          ],
+          "path": [
+            "Queues",
+            "Test"
+          ],
+          "query": [
+            {
+              "key": "Peek",
+              "value": "1"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Clear",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "https://lab.tagroot.io/Queues/Test",
+          "protocol": "https",
+          "host": [
+            "lab",
+            "tagroot",
+            "io"
+          ],
+          "path": [
+            "Queues",
+            "Test"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "auth": {
+    "type": "basic",
+    "basic": [
+      {
+        "key": "password",
+        "value": "{{LabRemoteLoginUserPassword}}",
+        "type": "string"
+      },
+      {
+        "key": "username",
+        "value": "RemoteLoginUser",
+        "type": "string"
+      }
+    ]
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "LabRemoteLoginUserPassword",
+      "value": ""
+    }
+  ]
+}
